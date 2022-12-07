@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TÍNH TUỔI</title>
+
+</head>
+<body>
+
+<table>
+    <tr>
+        <td>Tuổi của Em
+            <input type="text" ID="em">
+        </td>
+    </tr>
+
+        <button onclick="submit()">Submit</button>
+
+
+  <div ID="bo">
+  </div>
+    <div ID="anh">
+
+    </div>
+</Table>
+
+<script>
+
+    function submit() {
+        let em = +document.getElementById('em').value
+        let anh = em + 3
+        let bo = anh * 6
+
+        document.getElementById('anh').innerText = 'Tuổi của anh là:' + anh
+        document.getElementById('bo').innerText = 'Tuổi của bố là ' + bo
+    }
+
+    console.log()
+</script>
+
+</body>
+</html>

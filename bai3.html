@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+<div id = "CAN"></div>
+<div id="CHI"></div>
+  <div id="output"></div>
+
+  <tr>
+    <td>Nhập năm sinh:
+      <input type="text" ID="input">
+    </td>
+
+</table>
+<button onclick="submit()"> Submit</button>
+
+<script>
+  function submit() {
+  let input = document.getElementById('input').value
+  let CAN= input % 10
+  let CHI =input % 12
+  switch (CAN) {
+    case 0:
+      CAN="CANH"
+          break;
+    case 1:
+      CAN="THÂN";
+      break;
+    case 2:
+      CAN="NHÂM";
+      break;
+    case 3:
+      CAN="QUÝ";
+      break;
+    case 4:
+      CAN="GIÁP";
+      break;
+    case 5:
+      CAN="ẤT";
+      break;
+    case 6:
+      CAN="BÍNH";
+      break;
+    case 7:
+      CAN="ĐINH";
+      break;
+    case 8:
+      CAN="MẬU";
+      break;
+    case 9:
+      CAN="KỶ";
+      break;
+
+
+  }
+    switch (CHI) {
+      case 0:
+        CHI="THÂN";
+      case 1:
+        CHI="DẬU";
+        break;
+      case 2:
+        CHI="TUẤT";
+        break;
+      case 3:
+        CHI="HỢI";
+        break;
+      case 4:
+        CHI="TÝ";
+        break;
+      case 5:
+        CHI="SỬU";
+        break;
+      case 6:
+        CHI="DẦN";
+        break;
+      case 7:
+        CHI="MÃO";
+        break;
+      case 8:
+        CHI="THÌN";
+        break;
+      case 9:
+        CHI="TỴ";
+        break;
+      case 10:
+        CHI="NGỌ ";
+            break;
+
+
+    }
+    document.getElementById('output').innerHTML= 'Đây là năm '+ CAN + " " + CHI
+  }
+
+</script>
+</body>
+</html>

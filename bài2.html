@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <div id = "output"></div>
+    <div id="no_output"></div>
+    <tr>
+        <td>Nhập vào cạnh a:
+            <input type="text" ID="a">
+        </td>
+
+        <td>
+            Nhập vào canh b:
+            <input type="text" ID="b">
+        </td>
+
+        <td>
+            Nhập vào cạnh c:
+            <input type="text" ID="c">
+        </td>
+
+    </tr>
+
+</table>
+<button onclick="submit()"> Submit</button>
+<script>
+    function submit() {
+        let canha = document.getElementById('a').value
+        let canhb= document.getElementById('b').value
+        let canhc=document.getElementById('c').value
+
+      if(canha * canha + canhb * canhb == canhc * canhc
+          || canha * canhc + canhc * canhc == canhb * canhb
+          || canhb * canhb + canhc * canhc == canha * canhc) {
+
+        document.getElementById('output').innerHTML= 'đây là tam giác vuông'
+
+
+    }
+    else {
+        document.getElementById('no_output').innerHTML= 'đây không phải là tam giác vuông'
+    }
+    }
+
+</script>
+</body>
+</html>
